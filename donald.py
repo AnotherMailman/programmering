@@ -1,11 +1,6 @@
 #Hamburgare, Pommes frites, Läsk, Milkshake, Sallader, McNuggets
 prices = {
-    "Hamburgare" : 50, 
-    "Pommes frites" : 25, 
-    "Läsk" : 20, 
-    "Milkshake" : 30, 
-    "Sallader" : 45, 
-    "McNuggets" : 35
+"Hamburgare": 50, "Pommes frites": 25, "Läsk": 20, "Milkshake": 30, "Sallader": 45, "McNuggets": 35
 }
 
 sales_data = [
