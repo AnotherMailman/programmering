@@ -2,8 +2,6 @@ import random
 
 svar = random.randrange(1,101)
 
-print(svar)
-
 Ratt = 0
 while Ratt <= 1:
     print("Gissa ett number mellan 1 och 100")
