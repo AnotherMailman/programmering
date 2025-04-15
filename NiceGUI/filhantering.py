@@ -1,19 +1,33 @@
+from nicegui import ui
+
+target = "Alex"
+
+def targetalex():
+  target = "alex"
+def targetemma():
+  target = "emma"
+def targetjonas():
+  target = "jonas"
 konversation = []
 i = 0
-print("pick document")
-document = input()
-print("what person do you want to hear?")
-name = input()
-f = open(document), "r"
-for x in f:
-  print(x)
-  i = x.count(name + ":", 0, 1)
-  konversation.append(i)
-f.close
 
-f = open("en_sida", "a")
-for y in konversation:
-  f.write(y)
+document = "C:\Programmering\NiceGUI\konversation"
 
-f.write()
+with ui.column().classes("self-center"):
+  ui.button("Alex", on_click=lambda: targetalex())
+  ui.button("Emma", on_click=lambda: targetemma())
+  ui.button("Jonas", on_click=lambda: targetjonas())
+
+f = open(document, "r", encoding="utf-8")
+new_f = open("ny " + document, "w", encoding="utf-8")
+
+for line in f: 
+  name = line.split(":")[0]
+
+  if name != target:
+    new_f.write(line)
+
 f.close()
+new_f.close()
+
+ui.run(native=True)
